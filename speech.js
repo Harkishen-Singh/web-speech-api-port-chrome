@@ -1,4 +1,5 @@
-var speech = new webkitSpeechRecognition(),
+var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+var speech = new SpeechRecognition(),
     iteration = 0,
     messageUserSpeech = document.getElementById('messageUserSpeechID');
 
