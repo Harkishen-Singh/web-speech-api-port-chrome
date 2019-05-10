@@ -5,7 +5,6 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="speech.js"></script>
     <title>porting web speech api for chrome, firefox, edge</title>
 </head>
 <body>
@@ -16,19 +15,20 @@
     <div
             style="text-align: center; margin-top: 20%;"
     >
-        <input
-                type="text"
-                size="50"
+        <textarea
                 style="font-size: 18px; border-radius: 5px;"
                 name="messageUserSpeech"
-                id="messageUserSpeech"
-        >
+                id="messageUserSpeechID"
+                cols="80"
+                rows="10"
+        ></textarea>
         <img
                 src="assets/mic.png"
                 style="height: 20px; padding-top: 10px;"
-                onclick="initiateRecording()"
+                onclick="initiateRecording(1)"
         >
     </div>
 
+    <script src="speech.js"></script>
 </body>
 </html>
