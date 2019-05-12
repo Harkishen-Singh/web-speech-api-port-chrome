@@ -12,6 +12,12 @@ speech.onresult = function (eve) {
 
 var element = document.getElementById('language-selection-area');
 var selectElement = document.createElement('select');
+
+selectElement.onchange = function () {
+    console.log('lang now is ', this.value, ' ', this.innerText);
+    speech.lang = this.value;
+};
+
 selectElement.style.maxWidth = '100%';
 element.appendChild(selectElement);
 
@@ -116,22 +122,8 @@ for( var lang in languages) {
     optionELement.value = lang;
     optionELement.text = languages[lang];
     optionELement.id = '__' + lang;
-    optionELement.onclick = function () {
-        speech.lang = this.value;
-        console.warn('this language was ', this.value);
-    };
     selectElement.appendChild(optionELement);
 }
-setTimeout(() => {
-
-    for( let langg in languages) {
-        console.log(document.getElementById('__' + langg))
-        document.getElementById('__' + langg).addEventListener('click', function (eve) {
-            console.log('loging ', eve.target.id, ' ', eve.target.value);
-            speech.lang = eve.target.value;
-        }, false);
-    }
-}, 500);
 
 function initiateRecording(val) {
     iteration += val;
