@@ -115,9 +115,23 @@ for( var lang in languages) {
     console.log('lang is ', lang);
     optionELement.value = lang;
     optionELement.text = languages[lang];
+    optionELement.id = '__' + lang;
+    optionELement.onclick = function () {
+        speech.lang = this.value;
+        console.warn('this language was ', this.value);
+    };
     selectElement.appendChild(optionELement);
-    optionELement = null;
 }
+setTimeout(() => {
+
+    for( let langg in languages) {
+        console.log(document.getElementById('__' + langg))
+        document.getElementById('__' + langg).addEventListener('click', function (eve) {
+            console.log('loging ', eve.target.id, ' ', eve.target.value);
+            speech.lang = eve.target.value;
+        }, false);
+    }
+}, 500);
 
 function initiateRecording(val) {
     iteration += val;
