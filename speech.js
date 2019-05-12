@@ -10,45 +10,51 @@ speech.onresult = function (eve) {
     }
 };
 
-const element = document.getElementById('language-selection-area');
-let selectElement = document.createElement('select');
+var element = document.getElementById('language-selection-area');
+var selectElement = document.createElement('select');
 selectElement.style.maxWidth = '100%';
 element.appendChild(selectElement);
 
-const languages = {
+var languages = {
     'af-ZA': 'Afrikaans',
     'id-ID': 'Bahasa Indonesia',
     'ms-MY': 'Bahasa Melayu',
     'ca-ES': 'Català',
     'cs-CZ': 'Čeština',
     'de-DE': 'Deutsch',
-    'en-AU': 'En-Australia',
-    'en-CA': 'English-Canada',
-    'en-IN': 'India',
-    'en-NZ': 'New Zealand',
-    'en-ZA': 'South Africa',
-    'en-GB': 'United Kingdom',
-    'en-US': 'United States',
-    'es-AR': 'Argentina',
-    'es-BO': 'Bolivia',
-    'es-CL': 'Chile',
-    'es-CO': 'Colombia',
-    'es-CR': 'Costa Rica',
-    'es-EC': 'Ecuador',
-    'es-SV': 'El Salvador',
-    'es-ES': 'España',
-    'es-US': 'Estados Unidos',
-    'es-GT': 'Guatemala',
-    'es-HN': 'Honduras',
-    'es-MX': 'México',
-    'es-NI': 'Nicaragua',
-    'es-PA': 'Panamá',
-    'es-PY': 'Paraguay',
-    'es-PE': 'Perú',
-    'es-PR': 'Puerto Rico',
-    'es-DO': 'República Dominicana',
-    'es-UY': 'Uruguay',
-    'es-VE': 'Venezuela',
+    'en-AU': 'English - Australia',
+    'en-CA': 'English - Canada',
+    'en-IN': 'English - India',
+    'en-NZ': 'English - New Zealand',
+    'en-ZA': 'English - South Africa',
+    'en-GB': 'English - United Kingdom',
+    'en-US': 'English - United States',
+    'es-AR': 'Español - Argentina',
+    'es-BO': 'Español - Bolivia',
+    'es-CL': 'Español - Chile',
+    'es-CO': 'Español - Colombia',
+    'es-CR': 'Español - Costa Rica',
+    'es-EC': 'Español - Ecuador',
+    'es-SV': 'Español - El Salvador',
+    'es-ES': 'Español - España',
+    'es-US': 'Español - Estados Unidos',
+    'es-GT': 'Español - Guatemala',
+    'es-HN': 'Español - Honduras',
+    'es-MX': 'Español - México',
+    'es-NI': 'Español - Nicaragua',
+    'es-PA': 'Español - Panamá',
+    'es-PY': 'Español - Paraguay',
+    'es-PE': 'Español - Perú',
+    'es-PR': 'Español - Puerto Rico',
+    'es-DO': 'Español - República Dominicana',
+    'es-UY': 'Español - Uruguay',
+    'es-VE': 'Español - Venezuela',
+    'gu-IN': 'ગુજરાતી',
+    'kn-IN': 'ಕನ್ನಡ',
+    'km-KH': 'ភាសាខ្មែរ',
+    'lv-LV': 'Latviešu',
+    'lt-LT': 'Lietuvių',
+    'ml-IN': 'മലയാളം',
     'mr-IN': 'मराठी',
     'hu-HU': 'Magyar',
     'lo-LA': 'ລາວ',
@@ -101,13 +107,7 @@ const languages = {
     'ja-JP': '日本語',
     'la': 'Lingua latīna',
     'jv-ID': 'Basa Jawa',
-    'fil-PH': 'Filipino',
-    'gu-IN': 'ગુજરાતી',
-    'kn-IN': 'ಕನ್ನಡ',
-    'km-KH': 'ភាសាខ្មែរ',
-    'lv-LV': 'Latviešu',
-    'lt-LT': 'Lietuvių',
-    'ml-IN': 'മലയാളം'
+    'fil-PH': 'Filipino'
 };
 
 for( var lang in languages) {
